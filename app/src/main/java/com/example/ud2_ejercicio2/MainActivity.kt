@@ -146,8 +146,8 @@ fun CampoEdicionPrecio(
     )
 }
 
-private fun calcularIva(precio: Double, iva: Double): String {
-    val iva = precio + (iva / 100 * precio)
+private fun calcularIva(precio: Double, ivaRadio: Double): String {
+    val iva = precio + (ivaRadio / 100 * precio)
 
     // Devolvemos el precio final en la moneda del país en el que está configurado el dispositivo.
     return NumberFormat.getCurrencyInstance().format(iva)
